@@ -22,7 +22,7 @@ __Let's make this smooth and let me know why you are here.__
 `b`. To spam.
 `c`. To enquire something
 `d`. To request something\n"""
-ONE = """__Okay. Your request has been registered. Do not spam the inbox.__
+ONE = """__Okay. Noted. Do not spam the inbox.__
 
 **⚠️ You will be blocked and reported if you spam. ⚠️**\n\n"""
 TWO = " `███████▄▄███████████▄  \n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓███░░░░░░░░░░░░█\n██████▀▀▀█░░░░██████▀  \n░░░░░░░░░█░░░░█  \n░░░░░░░░░░█░░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░░▀▀ `\n\n**So uncool, this is not your home. Go bother someone else. You have been blocked and reported until further notice.**"
