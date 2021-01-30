@@ -261,7 +261,7 @@ async def wish_check(event):
 async def source(e):
     await edit_or_reply(
         e,
-        "Click [here](https://github.com/sandy1709/catuserbot) to open this lit af repo.",
+        "Click [here](https://github.com/AnimeKaizoku/Cat) to open this lit af repo.",
     )
 
 
