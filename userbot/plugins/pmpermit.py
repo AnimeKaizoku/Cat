@@ -248,15 +248,15 @@ if Config.PRIVATE_GROUP_ID is not None:
                         warns=warns,
                     )
                     + "\n\n"
-                    + "**Send** `/start` ** so that my master can decide why you're here.**"
+                    + "**Send** `/start` ** meanwhile and we can sort some stuff out.**"
                 )
             else:
 
                 USER_BOT_NO_WARN = (
-                    f"`Hi `{mention}`, I haven't approved you yet to personal message me, Don't spam my inbox."
+                    f"`Hi `{mention}`, This is an automation because I get lot of spammers, I will be with you shortly so please do not spam."
                     f"Just say the reason and wait until you get approved.\
                                     \n\nyou have {warns}/{totalwarns} warns`\
-                                    \n\n**Send** `/start` **so that my master can decide why you're here.**"
+                                    \n\n**Send** `/start` **meanwhile and we can sort some stuff out.**"
                 )
         else:
             if Config.CUSTOM_PMPERMIT_TEXT:
