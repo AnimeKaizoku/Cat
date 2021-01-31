@@ -277,7 +277,7 @@ if Config.PRIVATE_GROUP_ID is not None:
                 )
             else:
                 USER_BOT_NO_WARN = (
-                    f"`Hi `{mention}`, I haven't approved you yet to message me, Don't spam my inbox."
+                    f"I haven't whitelisted you yet to message me, Don't spam my inbox."
                     f"Just say the reason and wait until you get approved.\
                                     \n\nyou have {warns}/{totalwarns} warns`"
                 )
