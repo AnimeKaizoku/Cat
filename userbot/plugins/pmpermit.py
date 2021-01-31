@@ -60,7 +60,7 @@ if Config.PRIVATE_GROUP_ID is not None:
             pmpermit_sql.approve(user.id, reason)
             await edit_delete(
                 event,
-                f"`Approved to pm `[{user.first_name}](tg://user?id={user.id})",
+                f"[{user.first_name}](tg://user?id={user.id}) is now PM whitelisted.",
                 5,
             )
             if user.id in PMMESSAGE_CACHE:
@@ -73,7 +73,7 @@ if Config.PRIVATE_GROUP_ID is not None:
         else:
             await edit_delete(
                 event,
-                f"[{user.first_name}](tg://user?id={user.id}) `is already in approved list`",
+                f"[{user.first_name}](tg://user?id={user.id}) is already in whitelist.",
                 5,
             )
 
@@ -96,7 +96,7 @@ if Config.PRIVATE_GROUP_ID is not None:
             pmpermit_sql.disapprove(user.id)
             await edit_or_reply(
                 event,
-                f"`disapproved to pm` [{user.first_name}](tg://user?id={user.id})",
+                f"Removed [{user.first_name}](tg://user?id={user.id}) from whitelist ",
             )
         else:
             await edit_or_reply(
@@ -116,7 +116,7 @@ if Config.PRIVATE_GROUP_ID is not None:
         if user.id in PM_START:
             PM_START.remove(user.id)
         await event.edit(
-            f"`You are blocked Now .You Can't Message Me from now..`[{user.first_name}](tg://user?id={user.id})"
+            f"[{user.first_name}](tg://user?id={user.id}) is now blocked!"
         )
         await event.client(functions.contacts.BlockRequest(user.id))
 
@@ -130,7 +130,7 @@ if Config.PRIVATE_GROUP_ID is not None:
                 return await edit_delete(event, "`Couldn't Fectch user`", 5)
         await event.client(functions.contacts.UnblockRequest(user.id))
         await event.edit(
-            f"`You are Unblocked Now .You Can Message Me From now..`[{user.first_name}](tg://user?id={user.id})"
+            f"[{user.first_name}](tg://user?id={user.id}) unblocked!"
         )
 
     @bot.on(admin_cmd(pattern="listapproved$"))
@@ -248,15 +248,15 @@ if Config.PRIVATE_GROUP_ID is not None:
                         warns=warns,
                     )
                     + "\n\n"
-                    + "**Send** `/start` ** meanwhile and we can sort some stuff out.**"
+                    + "Stop being stupid and send `/start` instead."
                 )
             else:
 
                 USER_BOT_NO_WARN = (
-                    f"`Hi `{mention}`, This is an automation because I get lot of spammers, I will be with you shortly so please do not spam."
-                    f"Just say the reason and wait until you get approved.\
+                    f"This is an automation because I get lot of spammers."
+                    f"Just state your reason of visit and i'll be with you shortly.\
                                     \n\nyou have {warns}/{totalwarns} warns`\
-                                    \n\n**Send** `/start` **meanwhile and we can sort some stuff out.**"
+                                    \n\nSend `/start` to begin."
                 )
         else:
             if Config.CUSTOM_PMPERMIT_TEXT:
@@ -277,7 +277,7 @@ if Config.PRIVATE_GROUP_ID is not None:
                 )
             else:
                 USER_BOT_NO_WARN = (
-                    f"`Hi `{mention}`, I haven't approved you yet to personal message me, Don't spam my inbox."
+                    f"`Hi `{mention}`, I haven't approved you yet to message me, Don't spam my inbox."
                     f"Just say the reason and wait until you get approved.\
                                     \n\nyou have {warns}/{totalwarns} warns`"
                 )
