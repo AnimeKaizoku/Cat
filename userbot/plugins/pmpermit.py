@@ -115,9 +115,7 @@ if Config.PRIVATE_GROUP_ID is not None:
                 return await edit_delete(event, "`Couldn't Fectch user`", 5)
         if user.id in PM_START:
             PM_START.remove(user.id)
-        await event.edit(
-            f"[{user.first_name}](tg://user?id={user.id}) is now blocked!"
-        )
+        await event.edit(f"[{user.first_name}](tg://user?id={user.id}) is now blocked!")
         await event.client(functions.contacts.BlockRequest(user.id))
 
     @bot.on(admin_cmd(pattern="unblock(?: |$)(.*)"))
@@ -129,9 +127,7 @@ if Config.PRIVATE_GROUP_ID is not None:
             if not user:
                 return await edit_delete(event, "`Couldn't Fectch user`", 5)
         await event.client(functions.contacts.UnblockRequest(user.id))
-        await event.edit(
-            f"[{user.first_name}](tg://user?id={user.id}) unblocked!"
-        )
+        await event.edit(f"[{user.first_name}](tg://user?id={user.id}) unblocked!")
 
     @bot.on(admin_cmd(pattern="listapproved$"))
     async def approve_p_m(event):
