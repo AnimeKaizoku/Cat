@@ -244,7 +244,7 @@ if Config.PRIVATE_GROUP_ID is not None:
                         warns=warns,
                     )
                     + "\n\n"
-                    + "Stop being stupid and send `/start` instead."
+                    + "Send `/start` command once."
                 )
             else:
 
