@@ -19,7 +19,7 @@ PREV_REPLY_MESSAGE = {}
 CACHE = {}
 PMPERMIT_PIC = Config.PMPERMIT_PIC
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "cat"
-USER_BOT_WARN_ZERO = "You texted too much, sentry has blocked you until further notice."
+USER_BOT_WARN_ZERO = "Omae wa mou....shindeiru!"
 
 
 if Config.PRIVATE_GROUP_ID is not None:
@@ -250,7 +250,7 @@ if Config.PRIVATE_GROUP_ID is not None:
 
                 USER_BOT_NO_WARN = (
                     f"This is an automation because I get lot of spammers."
-                    f"Just state your reason of visit and i'll be with you shortly.\
+                    f"Just state your reason of visit while you wait.\
                                     \n\nyou have {warns}/{totalwarns} warns`\
                                     \n\nSend `/start` to begin."
                 )
