@@ -1,0 +1,2 @@
+on Vs_BuildToold go to 2nd tab and install Microsoft Visual C++ 14.0, around 4gigs. 
+Its needed to compile all this shit.
