@@ -20,7 +20,7 @@ async def _(event):
         try:
             result = await event.client(
                 functions.messages.CreateChatRequest(  # pylint:disable=E0602
-                    users=["@sarah_robot"],
+                    users=["@AllMightRobot"],
                     # Not enough users (to create a chat, for example)
                     # Telegram, no longer allows creating a chat with ourselves
                     title=group_name,
@@ -29,7 +29,7 @@ async def _(event):
             created_chat_id = result.chats[0].id
             await event.client(
                 functions.messages.DeleteChatUserRequest(
-                    chat_id=created_chat_id, user_id="@sarah_robot"
+                    chat_id=created_chat_id, user_id="@AllMightRobot"
                 )
             )
             result = await event.client(
